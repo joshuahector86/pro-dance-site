@@ -1,11 +1,16 @@
 import { Route, Routes } from "react-router-dom";
-import { Home } from "./pages";
+import { About, Archive, Home, WorkHistory } from "./pages";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-    </Routes>
+    <main className="container">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/work-history" element={<WorkHistory />} />
+        <Route path="/archive" element={<Archive />} />
+      </Routes>
+    </main>
   );
 }
 
