@@ -9,7 +9,7 @@ const Home = () => {
           <img
             src={headshot}
             alt="Dance headshot"
-            className="rounded-lg shadow max-w-xs w-full h-auto object-cover"
+            className="rounded-lg shadow max-w-lg w-full h-auto object-cover"
           />
         </div>
         <div className="flex-1 flex flex-col items-start justify-center gap-6">
@@ -17,10 +17,14 @@ const Home = () => {
             Welcome!
           </h1>
           <p className="text-lg md:text-xl max-w-xl">
-            Discover your passion for dance. Join our vibrant community, explore
-            a variety of classes, and experience the joy of movement. Whether
-            you’re a beginner or a seasoned dancer, there’s a place for you
-            here.
+            My name is Dimitri Hector and I am a passionate dancer and
+            choreographer. I have had the privilege of performing on stages
+            around the world, sharing my love for movement and storytelling
+            through dance. My journey has been filled with incredible
+            opportunities, from collaborating with world champions to creating
+            my own unique style that blends various dance forms. I am dedicated
+            to pushing the boundaries of dance and inspiring others through my
+            work.
           </p>
           <div className="flex gap-4 items-center">
             <a
