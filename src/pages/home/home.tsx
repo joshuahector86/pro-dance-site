@@ -1,10 +1,11 @@
 import Page from "../../components/layout/page";
 import headshot from "../../assets/dance_headshot.jpg";
+import LinkButton from "../../components/ui/link-button";
 
 const Home = () => {
   return (
     <Page>
-      <section className="flex flex-col md:flex-row items-center gap-5">
+      <section className="flex flex-col md:flex-row items-center gap-5  text-white">
         <div className="flex-1 flex justify-center">
           <img
             src={headshot}
@@ -13,7 +14,7 @@ const Home = () => {
           />
         </div>
         <div className="flex-1 flex flex-col items-start justify-center gap-6">
-          <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
+          <h1 className="text-4xl md:text-5xl font-extrabold leading-tight text-highlight">
             Welcome!
           </h1>
           <p className="text-lg md:text-xl max-w-xl">
@@ -27,20 +28,19 @@ const Home = () => {
             work.
           </p>
           <div className="flex gap-4 items-center">
-            <a
+            <LinkButton
               href="https://www.youtube.com/@dimitrihector256"
-              target="blank"
-              className="border rounded px-6 py-2 font-semibold hover:scale-105 transition"
+              target="_blank"
             >
-              View Youtube
-            </a>
-            <a
+              Youtube
+            </LinkButton>
+
+            <LinkButton
               href="https://www.instagram.com/dimkandel/"
-              target="blank"
-              className="border rounded px-6 py-2 font-semibold hover:scale-105 transition"
+              target="_blank"
             >
-              View Instagram
-            </a>
+              Instagram
+            </LinkButton>
           </div>
         </div>
       </section>
