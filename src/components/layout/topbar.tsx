@@ -22,7 +22,7 @@ const Topbar = () => {
         </div>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex gap-6 text-lg">
+        <nav className="hidden lg:flex gap-6 text-lg">
           {topbarLinks.map((link) => {
             const isActive = location.pathname === link.href;
             return (
@@ -42,30 +42,32 @@ const Topbar = () => {
         </nav>
 
         {/* Hamburger for md and smaller */}
-        <button
-          className="md:hidden flex flex-col justify-center items-center w-10 h-10 border border-highlight rounded bg-black text-highlight hover:bg-highlight hover:text-black transition"
-          onClick={() => setMenuOpen(true)}
-          aria-label="Open menu"
-        >
-          <span className="block w-6 h-1 bg-highlight mb-1 rounded"></span>
-          <span className="block w-6 h-1 bg-highlight mb-1 rounded"></span>
-          <span className="block w-6 h-1 bg-highlight rounded"></span>
-        </button>
-
-        <div className="flex gap-2 md:flex">
+        <div>
           <button
-            className="hidden md:block border border-highlight rounded px-4 py-1 font-semibold hover:bg-highlight hover:text-black transition"
-            onClick={() => setOpen(true)}
+            className="lg:hidden flex flex-col justify-center items-center w-10 h-10 border border-highlight rounded bg-black text-highlight hover:bg-highlight hover:text-black transition"
+            onClick={() => setMenuOpen(true)}
+            aria-label="Open menu"
           >
-            Contact Me!
+            <span className="block w-6 h-1 bg-highlight mb-1 rounded"></span>
+            <span className="block w-6 h-1 bg-highlight mb-1 rounded"></span>
+            <span className="block w-6 h-1 bg-highlight rounded"></span>
           </button>
+
+          <div className="flex gap-2 lg:flex">
+            <button
+              className="hidden lg:block border border-highlight rounded px-4 py-1 font-semibold hover:bg-highlight hover:text-black transition"
+              onClick={() => setOpen(true)}
+            >
+              Contact Me!
+            </button>
+          </div>
         </div>
       </header>
 
       {/* Mobile menu overlay */}
       {menuOpen && (
         <div
-          className="fixed inset-0 z-40 bg-black/60 flex justify-end md:hidden"
+          className="fixed inset-0 z-40 bg-black/60 flex justify-end lg:hidden"
           onClick={handleMenuOverlayClick}
         >
           <div
