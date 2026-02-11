@@ -1,5 +1,5 @@
 import Page from "../../components/layout/page";
-import headshot from "../../assets/dance_headshot.jpg";
+import headshot from "../../assets/headshot2.jpg";
 import { aboutPageText } from "../../data/website-text-data";
 import LinkButton from "../../components/ui/link-button";
 
@@ -11,10 +11,10 @@ const About = () => {
           <img
             src={headshot}
             alt="Dimitri Hector headshot"
-            className="rounded-full shadow-lg w-40 h-40 object-cover mb-4 border-4 border-highlight"
+            className="rounded-lg shadow-lg w-40 h-60 object-cover mb-4 border-4 border-highlight"
           />
           <h1 className="text-4xl font-extrabold text-center text-highlight">
-            About Dimitri
+            The Man Behind The Movement
           </h1>
         </div>
 
