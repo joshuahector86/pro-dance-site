@@ -25,7 +25,7 @@ const CardBody = ({
   children: React.ReactNode;
   className?: string;
 }) => {
-  return <div className={`text-gray-300 p-4  ${className}`}>{children}</div>;
+  return <div className={`text-gray-300 p-4 ${className}`}>{children}</div>;
 };
 
 const CardFooter = ({ children }: { children: React.ReactNode }) => {
