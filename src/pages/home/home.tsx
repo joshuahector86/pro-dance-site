@@ -1,5 +1,6 @@
 import Page from "../../components/layout/page";
 import headshot from "../../assets/dance_headshot.jpg";
+import LinkButton from "../../components/ui/link-button";
 
 const Home = () => {
   return (
@@ -27,20 +28,19 @@ const Home = () => {
             work.
           </p>
           <div className="flex gap-4 items-center">
-            <a
+            <LinkButton
               href="https://www.youtube.com/@dimitrihector256"
-              target="blank"
-              className="border border-highlight rounded px-6 py-2 font-semibold hover:bg-highlight hover:text-black transition text-white"
+              target="_blank"
             >
               Youtube
-            </a>
-            <a
+            </LinkButton>
+
+            <LinkButton
               href="https://www.instagram.com/dimkandel/"
-              target="blank"
-              className="border border-highlight rounded px-6 py-2 font-semibold hover:bg-highlight hover:text-black transition text-white"
+              target="_blank"
             >
               Instagram
-            </a>
+            </LinkButton>
           </div>
         </div>
       </section>

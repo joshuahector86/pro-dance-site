@@ -2,7 +2,7 @@
 
 @theme {
   --color-primary: #18181a;
-  --color-highlight: #4747ff;
+  --color-highlight: #3ddfff;
 }
 body {
   @apply bg-primary text-white;
