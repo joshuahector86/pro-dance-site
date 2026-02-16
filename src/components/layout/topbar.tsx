@@ -58,7 +58,7 @@ const Topbar = () => {
             <span className="block w-6 h-1 bg-accent-cool rounded"></span>
           </button>
 
-          <div className="flex gap-2 lg:flex">
+          <div className="hidden gap-2 lg:flex">
             <LinkButton href="/contact">Contact Dimitri</LinkButton>
           </div>
         </div>

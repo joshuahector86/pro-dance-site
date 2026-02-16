@@ -6,7 +6,7 @@ import CustomHeading from "../../components/ui/custom-heading";
 const About = () => {
   return (
     <Page>
-      <article className=" container py-6">
+      <article className=" container ">
         <CustomHeading
           className="mx-auto max-w-4xl mb-10"
           title="The Man Behind The Movement"

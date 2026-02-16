@@ -16,7 +16,7 @@ const Home = () => {
           className="w-full max-h-125 object-cover rounded-lg shadow-lg"
         />
       </div>
-      <section className="flex flex-col items-center gap-15 text-white p-10">
+      <section className="flex flex-col items-center gap-15 text-white ">
         <div className="flex-col flex md:flex-row items-center gap-5 justify-center">
           <div>
             <img
