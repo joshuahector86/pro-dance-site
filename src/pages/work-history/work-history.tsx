@@ -14,13 +14,13 @@ const WorkHistory = () => {
         {workHistory.map((entry) => (
           <div key={entry.id} className="mb-8">
             <WorkHistoryHeader title={entry.organization} />
-            <p className="text-md font-semibold text-muted">
+            <p className="text-lg font-semibold text-foreground">
               {entry.role} - {entry.location}
             </p>
-            <p className="text-lg ">
-              {entry.startDate} - {entry.endDate}
+            <p className="text-md text-muted  ">
+              {entry.startDate} {entry.endDate}
             </p>
-            <ul className="list-disc list-inside ">
+            <ul className="list-disc list-inside mt-2">
               {entry.highlights.map((highlight, index) => (
                 <li key={index}>{highlight}</li>
               ))}

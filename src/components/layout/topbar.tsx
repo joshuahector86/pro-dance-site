@@ -17,7 +17,7 @@ const Topbar = () => {
 
   return (
     <>
-      <header className="w-full shadow flex items-center justify-between px-8 py-4 bg-black text-white relative">
+      <header className="w-full shadow flex items-center justify-between px-8 py-4 bg-background  relative">
         <div className="flex items-center gap-2 font-bold text-xl tracking-wide">
           <span className="uppercase text-accent-cool hover:scale-115 transition">
             <a href="/" className="hover:text-white">

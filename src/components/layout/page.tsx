@@ -8,7 +8,7 @@ interface PageProps {
 
 const Page: React.FC<PageProps> = ({ children }) => {
   return (
-    <div className="justify-between h-full flex flex-col">
+    <div className="min-h-screen flex flex-col">
       <div className="flex">
         <Topbar />
       </div>

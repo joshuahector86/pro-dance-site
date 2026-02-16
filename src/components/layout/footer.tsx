@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="w-full mt-12 border-t border-highlight py-6 flex flex-col md:flex-row items-center justify-between px-8 text-sm bg-linear-to-br from-black via-highlight to-black text-white shadow-xl rounded">
+    <footer className="w-full  border-t border-highlight py-6 flex flex-col md:flex-row items-center justify-between bg-background">
       <div className="mb-2 md:mb-0">
         &copy; {new Date().getFullYear()} <span>Dimitri Hector</span>. All
         rights reserved.

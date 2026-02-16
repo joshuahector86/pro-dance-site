@@ -6,16 +6,16 @@ import CustomHeading from "../../components/ui/custom-heading";
 const About = () => {
   return (
     <Page>
-      <article className="max-w-4xl mx-auto  ">
+      <article className=" container py-6">
         <CustomHeading
-          className="p-10 pb-10"
+          className="mx-auto max-w-4xl mb-10"
           title="The Man Behind The Movement"
           subtitle="Learn more about Dimitri's journey"
         />
 
         {aboutPageText.map((paragraph) => (
           <div
-            className={`flex flex-col md:flex-row md:gap-20 gap-5 md:mb-25 mb-10 items-center md:items-start ${
+            className={`mx-auto max-w-4xl flex flex-col md:flex-row md:gap-20 gap-5 md:mb-15 mb-10 items-center md:items-start ${
               paragraph.id === "about-page-2" ? "md:flex-row-reverse" : ""
             }`}
             key={paragraph.id}
