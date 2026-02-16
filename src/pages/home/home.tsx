@@ -3,6 +3,7 @@ import headshot from "../../assets/headshot_adjusted.png";
 import T_piece from "../../assets/thibaut_piece.jpg";
 import LinkButton from "../../components/ui/link-button";
 import bannerImg from "../../assets/dance_banner.jpg";
+import CustomHeading from "../../components/ui/custom-heading";
 
 const Home = () => {
   return (
@@ -25,9 +26,7 @@ const Home = () => {
             />
           </div>
           <div className="flex-1 flex flex-col items-start justify-center">
-            <h1 className="text-4xl md:text-5xl font-extrabold leading-tight text-highlight">
-              Welcome!
-            </h1>
+            <CustomHeading title="Welcome!" />
             <p className="text-lg md:text-lg max-w-xl">
               My name is Dimitri Hector and I am a passionate dancer and
               choreographer. I have had the privilege of performing on stages
@@ -43,9 +42,7 @@ const Home = () => {
 
         <div className="flex-col flex md:flex-row items-center gap-5 justify-center">
           <div>
-            <h1 className="text-4xl md:text-5xl font-extrabold leading-tight text-highlight">
-              Current Work
-            </h1>
+            <CustomHeading title="Current Work" />
 
             <p className="text-lg md:text-lg max-w-xl">
               Dimitri is currently involved with New York Dance Project for the
@@ -84,7 +81,7 @@ const Home = () => {
             Instagram
           </LinkButton>
         </div>
-        <blockquote className="bg-white/10 border-l-4 border-highlight text-lg italic text-white px-6 py-4 rounded-md shadow max-w-2xl mx-auto">
+        <blockquote className="bg-white/10 border-l-4 border-accent-cool text-lg italic text-white px-6 py-4 rounded-md shadow max-w-2xl mx-auto">
           "For me the true essence of dance is in community. We strive to tell
           our stories in a way that trancends even the limitations of speech.
           While I do dance for my own selfish reasons, I believe that dance is

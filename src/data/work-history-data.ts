@@ -4,9 +4,9 @@ export type WorkEntry = {
   role: string;
   location: string;
   startDate: string;
-  endDate: string | "Present";
   category: "company" | "freelance" | "teaching" | "performance" | "media";
   highlights: string[];
+  endDate: string | "Present";
   link?: string;
 };
 
@@ -16,7 +16,7 @@ export const workHistory: WorkEntry[] = [
     organization: "New York Dance Project",
     role: "Company Member",
     location: "New York, NY",
-    startDate: "June 2025",
+    startDate: "2025",
     endDate: "Present",
     category: "company",
     highlights: [
@@ -29,7 +29,7 @@ export const workHistory: WorkEntry[] = [
     organization: "Freelance",
     role: "Freelance Dance Artist and Performer",
     location: "New York, NY",
-    startDate: "September 2019",
+    startDate: "2019",
     endDate: "Present",
     category: "freelance",
     highlights: [
@@ -42,7 +42,7 @@ export const workHistory: WorkEntry[] = [
     organization: "West Coast Swing",
     role: "International West Coast Swing Dance Instructor and Performer",
     location: "New York, NY",
-    startDate: "September 2019",
+    startDate: "2019",
     endDate: "Present",
     category: "teaching",
     highlights: [
@@ -57,8 +57,8 @@ export const workHistory: WorkEntry[] = [
     organization: "Alvin Ailey American Dance Theater Extension",
     role: "Dance Model — Whitney Museum Edges of Ailey Figure Drawing",
     location: "New York, NY",
-    startDate: "January 2025",
-    endDate: "January 2025",
+    startDate: "2025",
+    endDate: "2025",
     category: "performance",
     highlights: [
       "Dance model representing Alvin Ailey at the Whitney Museum for the Edges of Ailey exhibition.",
@@ -70,8 +70,8 @@ export const workHistory: WorkEntry[] = [
     organization: "Alvin Ailey American Dance Theater Extension",
     role: "Dancer — NY1 Alvin Ailey News Feature",
     location: "New York, NY",
-    startDate: "July 2024",
-    endDate: "July 2024",
+    startDate: "2024",
+    endDate: "2024",
     category: "media",
     highlights: [
       "Performed with a group of Alvin Ailey Extension dancers for a NY1 news feature.",
@@ -84,8 +84,8 @@ export const workHistory: WorkEntry[] = [
     organization: "Danse En L'air Ballet Company",
     role: "Dancer",
     location: "New York, NY",
-    startDate: "September 2024",
-    endDate: "October 2024",
+    startDate: "2024",
+    endDate: "2024",
     category: "company",
     highlights: [
       "Performed with Danse En L'air Ballet Company in their annual show.",
@@ -96,8 +96,8 @@ export const workHistory: WorkEntry[] = [
     organization: "Gatsby Entertainment",
     role: "Dancer",
     location: "New York, NY",
-    startDate: "September 2024",
-    endDate: "September 2024",
+    startDate: "2024",
+    endDate: "2024",
     category: "performance",
     highlights: [
       "Gig performance presenting authentic Lindy Hop dancing from the Jazz era.",
@@ -108,8 +108,8 @@ export const workHistory: WorkEntry[] = [
     organization: "Earl Mosley Diversity of Dance",
     role: "Dancer — Hearts of Men 2024",
     location: "New York, NY",
-    startDate: "September 2024",
-    endDate: "September 2024",
+    startDate: "2024",
+    endDate: "2024",
     category: "performance",
     highlights: [
       "Performed in the Hearts of Men 2024 show.",
@@ -121,8 +121,8 @@ export const workHistory: WorkEntry[] = [
     organization: "Cornell University",
     role: "Swing Dance Teaching Assistant",
     location: "Ithaca, NY",
-    startDate: "September 2016",
-    endDate: "May 2019",
+    startDate: "2016",
+    endDate: "2019",
     category: "teaching",
     highlights: [
       "Teaching assistant for Cornell University's Physical Education department.",

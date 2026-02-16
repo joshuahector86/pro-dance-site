@@ -11,7 +11,7 @@ import { archiveData } from "../../data/archive-data";
 const Archive = () => {
   return (
     <Page>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
+      <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
         {archiveData.map((item) => (
           <Card
             key={item.id}

@@ -4,6 +4,7 @@ import { useContactDialogStore } from "../../store/contactDialogStore";
 import Dialog from "../ui/dialog";
 import ContactForm from "../../pages/contact/ContactForm";
 import { useState } from "react";
+import LinkButton from "../ui/link-button";
 
 const Topbar = () => {
   const location = useLocation();
@@ -18,7 +19,11 @@ const Topbar = () => {
     <>
       <header className="w-full shadow flex items-center justify-between px-8 py-4 bg-black text-white relative">
         <div className="flex items-center gap-2 font-bold text-xl tracking-wide">
-          <span className="uppercase text-highlight">Dimitri Hector</span>
+          <span className="uppercase text-accent-cool hover:scale-115 transition">
+            <a href="/" className="hover:text-white">
+              Dimitri Hector
+            </a>
+          </span>
         </div>
 
         {/* Desktop nav */}
@@ -31,8 +36,8 @@ const Topbar = () => {
                 href={link.href}
                 className={
                   isActive
-                    ? "text-highlight underline rounded px-3 py-1 font-semibold transition"
-                    : "hover:text-highlight transition text-white px-3 py-1"
+                    ? "text-accent-cool underline rounded px-3 py-1 font-semibold transition"
+                    : "hover:text-accent-cool transition text-white px-3 py-1"
                 }
               >
                 {link.name}
@@ -44,22 +49,17 @@ const Topbar = () => {
         {/* Hamburger for md and smaller */}
         <div>
           <button
-            className="lg:hidden flex flex-col justify-center items-center w-10 h-10 border border-highlight rounded bg-black text-highlight hover:bg-highlight hover:text-black transition"
+            className="lg:hidden flex flex-col justify-center items-center w-10 h-10 border border-accent-cool rounded bg-black text-accent-cool hover:bg-accent-cool hover:text-black transition"
             onClick={() => setMenuOpen(true)}
             aria-label="Open menu"
           >
-            <span className="block w-6 h-1 bg-highlight mb-1 rounded"></span>
-            <span className="block w-6 h-1 bg-highlight mb-1 rounded"></span>
-            <span className="block w-6 h-1 bg-highlight rounded"></span>
+            <span className="block w-6 h-1 bg-accent-cool mb-1 rounded"></span>
+            <span className="block w-6 h-1 bg-accent-cool mb-1 rounded"></span>
+            <span className="block w-6 h-1 bg-accent-cool rounded"></span>
           </button>
 
           <div className="flex gap-2 lg:flex">
-            <button
-              className="hidden lg:block border border-highlight rounded px-4 py-1 font-semibold hover:bg-highlight hover:text-black transition"
-              onClick={() => setOpen(true)}
-            >
-              Contact Me!
-            </button>
+            <LinkButton href="/contact">Contact Dimitri</LinkButton>
           </div>
         </div>
       </header>
@@ -71,11 +71,11 @@ const Topbar = () => {
           onClick={handleMenuOverlayClick}
         >
           <div
-            className="w-[70vw] max-w-xs max-h-96 rounded bg-linear-to-br from-black via-highlight to-black shadow-xl flex flex-col p-6 gap-4 animate-slide-in-right duration-700 relative"
+            className="w-[70vw] max-w-xs max-h-96 rounded bg-linear-to-br from-black via-accent-cool to-black shadow-xl flex flex-col p-6 gap-4 animate-slide-in-right duration-700 relative"
             onClick={(e) => e.stopPropagation()}
           >
             <button
-              className="absolute top-4 right-4 text-white hover:text-highlight text-2xl font-bold"
+              className="absolute top-4 right-4 text-white hover:text-accent-cool text-2xl font-bold"
               onClick={() => setMenuOpen(false)}
               aria-label="Close menu"
             >
@@ -90,8 +90,8 @@ const Topbar = () => {
                     href={link.href}
                     className={
                       isActive
-                        ? "text-highlight underline rounded px-3 py-2 font-semibold transition bg-black/30"
-                        : "hover:text-highlight transition text-white px-3 py-2 rounded hover:bg-black/20"
+                        ? "text-accent-cool underline rounded px-3 py-2 font-semibold transition bg-black/30"
+                        : "hover:text-accent-cool transition text-white px-3 py-2 rounded hover:bg-black/20"
                     }
                     onClick={() => setMenuOpen(false)}
                   >
@@ -99,15 +99,7 @@ const Topbar = () => {
                   </a>
                 );
               })}
-              <button
-                className="border border-highlight rounded px-4 py-2 font-semibold hover:bg-highlight hover:text-black transition mt-4 bg-black/30 text-white"
-                onClick={() => {
-                  setOpen(true);
-                  setMenuOpen(false);
-                }}
-              >
-                Contact Me!
-              </button>
+              <LinkButton href="/contact">Contact Dimitri</LinkButton>
             </nav>
           </div>
         </div>

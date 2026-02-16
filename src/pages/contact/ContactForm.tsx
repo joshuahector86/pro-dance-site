@@ -16,7 +16,7 @@ const ContactForm = () => {
 
   if (submitted) {
     return (
-      <div className="text-center p-4 text-highlight text-lg font-semibold">
+      <div className="text-center p-4 text-accent-cool text-lg font-semibold">
         Thank you for your message!
       </div>
     );
@@ -25,13 +25,13 @@ const ContactForm = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col gap-6 bg-black text-white p-6 rounded border border-highlight shadow-lg w-full md:w-130 lg:w-175 mx-auto"
+      className="flex flex-col gap-6 bg-black text-white p-6 rounded border border-accent-cool shadow-lg w-full md:w-130 lg:w-175 mx-auto"
     >
-      <h1 className="text-highlight text-4xl font-bold text-center">
+      <h1 className="text-accent-cool text-4xl font-bold text-center">
         Contact Dimitri
       </h1>
       <div className="flex flex-col gap-2">
-        <label htmlFor="name" className="font-semibold text-highlight">
+        <label htmlFor="name" className="font-semibold text-accent-cool">
           Name
         </label>
         <input
@@ -39,12 +39,12 @@ const ContactForm = () => {
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="border border-highlight rounded px-3 py-2 bg-transparent text-white focus:border-highlight focus:ring-2 focus:ring-highlight outline-none transition w-full"
+          className="border border-accent-cool rounded px-3 py-2 bg-transparent text-white focus:border-accent-cool focus:ring-2 focus:ring-accent-cool outline-none transition w-full"
           required
         />
       </div>
       <div className="flex flex-col gap-2">
-        <label htmlFor="email" className="font-semibold text-highlight">
+        <label htmlFor="email" className="font-semibold text-accent-cool">
           Email
         </label>
         <input
@@ -52,12 +52,12 @@ const ContactForm = () => {
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="border border-highlight rounded px-3 py-2 bg-transparent text-white focus:border-highlight focus:ring-2 focus:ring-highlight outline-none transition w-full"
+          className="border border-accent-cool rounded px-3 py-2 bg-transparent text-white focus:border-accent-cool focus:ring-2 focus:ring-accent-cool outline-none transition w-full"
           required
         />
       </div>
       <div className="flex flex-col gap-2">
-        <label htmlFor="phone" className="font-semibold text-highlight">
+        <label htmlFor="phone" className="font-semibold text-accent-cool">
           Phone Number
         </label>
         <input
@@ -65,11 +65,11 @@ const ContactForm = () => {
           type="tel"
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
-          className="border border-highlight rounded px-3 py-2 bg-transparent text-white focus:border-highlight focus:ring-2 focus:ring-highlight outline-none transition w-full"
+          className="border border-accent-cool rounded px-3 py-2 bg-transparent text-white focus:border-accent-cool focus:ring-2 focus:ring-accent-cool outline-none transition w-full"
         />
       </div>
       <div className="flex flex-col gap-2">
-        <label htmlFor="subject" className="font-semibold text-highlight">
+        <label htmlFor="subject" className="font-semibold text-accent-cool">
           Message Subject
         </label>
         <input
@@ -77,26 +77,26 @@ const ContactForm = () => {
           type="text"
           value={subject}
           onChange={(e) => setSubject(e.target.value)}
-          className="border border-highlight rounded px-3 py-2 bg-transparent text-white focus:border-highlight focus:ring-2 focus:ring-highlight outline-none transition w-full"
+          className="border border-accent-cool rounded px-3 py-2 bg-transparent text-white focus:border-accent-cool focus:ring-2 focus:ring-accent-cool outline-none transition w-full"
           required
         />
       </div>
       <div className="flex flex-col gap-2">
-        <label htmlFor="message" className="font-semibold text-highlight">
+        <label htmlFor="message" className="font-semibold text-accent-cool">
           Message
         </label>
         <textarea
           id="message"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          className="border border-highlight rounded px-3 py-2 bg-transparent text-white focus:border-highlight focus:ring-2 focus:ring-highlight outline-none transition w-full"
+          className="border border-accent-cool rounded px-3 py-2 bg-transparent text-white focus:border-accent-cool focus:ring-2 focus:ring-accent-cool outline-none transition w-full"
           rows={4}
           required
         />
       </div>
       <button
         type="submit"
-        className="border border-highlight rounded px-5 py-2 font-semibold hover:bg-highlight hover:text-black transition text-white bg-black mt-2"
+        className="border border-accent-cool rounded px-5 py-2 font-semibold hover:bg-accent-cool hover:text-black transition text-white bg-black mt-2"
       >
         Send
       </button>
