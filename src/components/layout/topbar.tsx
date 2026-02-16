@@ -71,7 +71,7 @@ const Topbar = () => {
           onClick={handleMenuOverlayClick}
         >
           <div
-            className="w-[70vw] max-w-xs h-full bg-linear-to-br from-black via-highlight to-black shadow-xl flex flex-col p-6 gap-4 animate-slide-in-right relative"
+            className="w-[70vw] max-w-xs max-h-96 rounded bg-linear-to-br from-black via-highlight to-black shadow-xl flex flex-col p-6 gap-4 animate-slide-in-right duration-700 relative"
             onClick={(e) => e.stopPropagation()}
           >
             <button
