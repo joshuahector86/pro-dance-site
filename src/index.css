@@ -2,14 +2,20 @@
 
 @theme {
   --color-primary: #18181a;
-  --color-highlight: #3ddfff;
+  --color-secondary: #fbbf24;
+  --color-foreground: #ffffff;
+  --color-background: #0a0a0b;
+  --color-surface: #242426;
+  --color-muted: #8a8a8e;
+  --color-accent-warm: #ff8a3d;
+  --color-accent-cool: #3d7fff;
+  --color-border: #2d2d30;
 }
 body {
-  @apply bg-primary text-white;
+  @apply bg-background text-foreground;
 }
 .container {
   max-width: 80rem;
-  height: 100vh;
-  margin: 0 auto;
   padding: 1rem;
+  margin: 0 auto;
 }

@@ -1,4 +1,36 @@
+import type { KeyboardEvent } from "react";
+
 const Card = ({
+  children,
+  className,
+  onClick,
+}: {
+  children: React.ReactNode;
+  className?: string;
+  onClick?: () => void;
+}) => {
+  const handleKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
+    if (!onClick) return;
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      onClick();
+    }
+  };
+
+  return (
+    <div
+      className={`border border-border rounded-2xl overflow-hidden flex flex-col bg-surface/70  ${className}`}
+      onClick={onClick}
+      role={onClick ? "button" : undefined}
+      tabIndex={onClick ? 0 : undefined}
+      onKeyDown={handleKeyDown}
+    >
+      {children}
+    </div>
+  );
+};
+
+const CardHeader = ({
   children,
   className,
 }: {
@@ -6,16 +38,8 @@ const Card = ({
   className?: string;
 }) => {
   return (
-    <div
-      className={`border border-highlight rounded p-4 max-w-sm flex flex-col ${className}`}
-    >
-      {children}
-    </div>
+    <h2 className={`text-lg font-semibold flex-1 ${className}`}>{children}</h2>
   );
-};
-
-const CardHeader = ({ children }: { children: React.ReactNode }) => {
-  return <h2 className="text-xl font-bold mb-2 flex-1">{children}</h2>;
 };
 
 const CardBody = ({
@@ -25,7 +49,11 @@ const CardBody = ({
   children: React.ReactNode;
   className?: string;
 }) => {
-  return <div className={`text-gray-300 p-4 ${className}`}>{children}</div>;
+  return (
+    <div className={`text-foreground p-4 bg-surface/60 ${className}`}>
+      {children}
+    </div>
+  );
 };
 
 const CardFooter = ({ children }: { children: React.ReactNode }) => {
@@ -33,13 +61,7 @@ const CardFooter = ({ children }: { children: React.ReactNode }) => {
 };
 
 const CardImage = ({ src, alt }: { src: string; alt: string }) => {
-  return (
-    <img
-      src={src}
-      alt={alt}
-      className="w-[50%] mx-auto h-auto rounded flex-1"
-    />
-  );
+  return <img src={src} alt={alt} className="w-full h-48 object-cover" />;
 };
 
 export { Card, CardHeader, CardBody, CardFooter, CardImage };

@@ -1,13 +1,13 @@
-import archive_1_img from "../assets/dance_headshot.jpg";
+import archive_1_img from "../assets/dance_banner.jpg";
 
 export const archiveData = [
   {
     id: 1,
-    title: "Champions West Coast Swing Strictly Contest",
+    title: "Champions Strictly Swing",
     description:
       "Dimitri Hector dancing with Kenneth Rutland in a Champions West Coast Swing Strictly contest",
     image: archive_1_img,
-    link: "https://www.google.com",
+    link: "https://www.instagram.com/reel/C2Py7rmuYmW/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
     music: "Song Title by Artist Name",
     pieceTitle: "Piece Title",
   },
@@ -22,6 +22,42 @@ export const archiveData = [
   },
   {
     id: 3,
+    title: "Archive 3",
+    description: "This is the third archive item.",
+    image: archive_1_img,
+    link: "#",
+    music: "Yet Another Song Title by Yet Another Artist",
+    pieceTitle: "Yet Another Piece Title",
+  },
+  {
+    id: 4,
+    title: "Archive 4",
+    description: "This is the third archive item.",
+    image: archive_1_img,
+    link: "#",
+    music: "Yet Another Song Title by Yet Another Artist",
+    pieceTitle: "Yet Another Piece Title",
+  },
+  {
+    id: 6,
+    title: "Archive 6",
+    description: "This is the third archive item.",
+    image: archive_1_img,
+    link: "#",
+    music: "Yet Another Song Title by Yet Another Artist",
+    pieceTitle: "Yet Another Piece Title",
+  },
+  {
+    id: 7,
+    title: "Archive 3",
+    description: "This is the third archive item.",
+    image: archive_1_img,
+    link: "#",
+    music: "Yet Another Song Title by Yet Another Artist",
+    pieceTitle: "Yet Another Piece Title",
+  },
+  {
+    id: 8,
     title: "Archive 3",
     description: "This is the third archive item.",
     image: archive_1_img,
