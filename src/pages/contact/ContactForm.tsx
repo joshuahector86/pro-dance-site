@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 import CustomHeading from "../../components/ui/custom-heading";
 
 const ContactForm = () => {
@@ -8,11 +9,48 @@ const ContactForm = () => {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // TODO: Add actual submission logic
-    setSubmitted(true);
+    setIsLoading(true);
+    setError("");
+
+    const templateParams = {
+      user_name: name,
+      user_email: email,
+      user_phone: phone,
+      user_subject: subject,
+      message: message,
+    };
+
+    Promise.all([
+      // Template 1 → sends form details to you
+      emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        templateParams,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+      ),
+      // Template 2 → sends confirmation to the user
+      emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_CONFIRMATION_TEMPLATE_ID,
+        templateParams,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+      ),
+    ])
+      .then(() => {
+        setSubmitted(true);
+      })
+      .catch((err) => {
+        console.error("EmailJS error:", err);
+        setError("Something went wrong. Please try again.");
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
   };
 
   if (submitted) {
@@ -31,7 +69,7 @@ const ContactForm = () => {
       <div className="flex flex-col items-center space-y-2">
         <CustomHeading title="Get in Touch" />
         <p className="text-muted text-sm md:text-base">
-          Let’s connect about projects, performances, and collaborations.
+          Let's connect about projects, performances, and collaborations.
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -86,7 +124,7 @@ const ContactForm = () => {
             value={subject}
             onChange={(e) => setSubject(e.target.value)}
             className="border border-border rounded-xl px-4 py-3 bg-background/60 text-foreground placeholder:text-muted focus:border-accent-cool focus:ring-2 focus:ring-accent-cool/60 outline-none transition w-full"
-            placeholder="What’s this about?"
+            placeholder="What's this about?"
             required
           />
         </div>
@@ -105,11 +143,15 @@ const ContactForm = () => {
           required
         />
       </div>
+
+      {error && <p className="text-red-500 text-sm text-center">{error}</p>}
+
       <button
         type="submit"
-        className="rounded-xl px-6 py-3 font-semibold transition text-background bg-accent-cool hover:bg-accent-warm shadow-lg shadow-accent-cool/20 mt-2"
+        disabled={isLoading}
+        className="rounded-xl px-6 py-3 font-semibold transition text-background bg-accent-cool hover:bg-accent-warm shadow-lg shadow-accent-cool/20 mt-2 disabled:opacity-60 disabled:cursor-not-allowed"
       >
-        Send
+        {isLoading ? "Sending..." : "Send"}
       </button>
     </form>
   );
