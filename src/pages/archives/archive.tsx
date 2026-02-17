@@ -8,6 +8,7 @@ import {
 } from "../../components/ui/card";
 import Dialog from "../../components/ui/dialog";
 import { archiveData } from "../../data/archive-data";
+import LinkButton from "../../components/ui/link-button";
 
 const Archive = () => {
   const [selectedItem, setSelectedItem] = useState<
@@ -37,10 +38,10 @@ const Archive = () => {
           {paginatedItems.map((item, index) => (
             <Card
               key={`${item.id}-${startIndex + index}`}
-              className="transition-transform transform hover:-translate-y-1 cursor-pointer"
+              className="transition-transform transform hover:scale-105 hover:bg-accent-warm cursor-pointer"
               onClick={() => setSelectedItem(item)}
             >
-              <CardBody>
+              <CardBody className="flex flex-col items-center">
                 <CardImage src={item.image} alt={item.title} />
                 <CardHeader className="truncate mt-3">{item.title}</CardHeader>
               </CardBody>
@@ -95,14 +96,13 @@ const Archive = () => {
               </div>
             </div>
             {selectedItem.link && (
-              <a
+              <LinkButton
                 href={selectedItem.link}
                 target="_blank"
-                rel="noreferrer"
                 className="inline-flex items-center gap-2 text-accent-cool hover:text-accent-warm transition"
               >
                 Watch The Dance!
-              </a>
+              </LinkButton>
             )}
           </div>
         )}

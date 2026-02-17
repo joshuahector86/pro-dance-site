@@ -81,7 +81,7 @@ const Home = () => {
             Instagram
           </LinkButton>
         </div>
-        <blockquote className="bg-white/10 border-l-4 border-accent-cool text-lg italic text-white px-6 py-4 rounded-md shadow max-w-2xl mx-auto">
+        <blockquote className="mb-10 bg-white/10 border-l-4 border-accent-cool text-lg italic text-white px-6 py-4 rounded-md shadow max-w-2xl mx-auto">
           "For me the true essence of dance is in community. We strive to tell
           our stories in a way that trancends even the limitations of speech.
           While I do dance for my own selfish reasons, I believe that dance is

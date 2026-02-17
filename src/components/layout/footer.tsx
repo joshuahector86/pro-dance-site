@@ -10,7 +10,7 @@ const Footer = () => {
       name: "Youtube",
       href: socialLinks.find((link) => link.name === "Youtube")?.href || "#",
     },
-    { name: "Contact Dimitri", href: "/contact" },
+    { name: "Contact ", href: "/contact" },
   ];
   return (
     <footer className="w-full  border-t border-highlight py-6 flex flex-col md:flex-row items-center justify-between bg-background px-10">
