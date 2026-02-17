@@ -61,7 +61,9 @@ const CardFooter = ({ children }: { children: React.ReactNode }) => {
 };
 
 const CardImage = ({ src, alt }: { src: string; alt: string }) => {
-  return <img src={src} alt={alt} className="w-full h-48 object-cover" />;
+  return (
+    <img src={src} alt={alt} className="w-full h-50 object-cover rounded" />
+  );
 };
 
 export { Card, CardHeader, CardBody, CardFooter, CardImage };

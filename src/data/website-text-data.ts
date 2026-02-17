@@ -1,4 +1,6 @@
-import testPhoto from "../assets/dance_banner.jpg";
+import about1 from "../assets/about1.jpg";
+import about2 from "../assets/about4.png";
+import about3 from "../assets/about3.jpg";
 
 export const aboutPageText = [
   {
@@ -14,7 +16,7 @@ export const aboutPageText = [
         thing every time: a body that listens, a mind that understands 
         movement on a cellular level, and a presence that fills the 
         room before the music even starts.`,
-    photo: testPhoto,
+    photo: about1,
   },
   {
     id: "about-page-2",
@@ -29,7 +31,7 @@ export const aboutPageText = [
         and brought authentic Jazz-era Lindy Hop to life for Gatsby 
         Entertainment. Each experience has added a new layer, a new dimension, 
         a new tool in a growing vocabulary that refuses to be defined by a single genre.`,
-    photo: testPhoto,
+    photo: about2,
   },
   {
     id: "about-page-3",
@@ -40,6 +42,6 @@ export const aboutPageText = [
         background, because he genuinely believes that movement is something everyone 
         deserves access to. But make no mistake: this is a performer first. Look him up. 
         Watch him move. Then tell him where you need him.`,
-    photo: testPhoto,
+    photo: about3,
   },
 ];
