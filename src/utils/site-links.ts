@@ -3,6 +3,7 @@ export const topbarLinks = [
   { name: "About", href: "/about" },
   { name: "Work History", href: "/work-history" },
   { name: "Archive", href: "/archive" },
+  { name: "SyntaxNSteps", href: "https://snytax-nsteps.vercel.app/" },
 ];
 
 export const socialLinks = [
