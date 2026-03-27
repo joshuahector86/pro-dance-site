@@ -15,8 +15,8 @@ const Footer = () => {
   return (
     <footer className="w-full  border-t border-highlight py-6 flex flex-col md:flex-row items-center justify-between bg-background px-10">
       <div className="mb-2 md:mb-0">
-        &copy; {new Date().getFullYear()} <span>Dimitri Hector</span>. All
-        rights reserved.
+        &copy; {new Date().getFullYear()} <span>SyntaxNSteps</span>. All rights
+        reserved.
       </div>
       <div className="flex gap-4 items-center">
         {footerLinks.map((link) => (
