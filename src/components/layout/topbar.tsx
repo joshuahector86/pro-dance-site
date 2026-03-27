@@ -30,10 +30,13 @@ const Topbar = () => {
         <nav className="hidden lg:flex gap-6 text-lg">
           {topbarLinks.map((link) => {
             const isActive = location.pathname === link.href;
+            const isExternal = link.href.startsWith("http");
             return (
               <a
                 key={link.name}
                 href={link.href}
+                target={isExternal ? "_blank" : undefined}
+                rel={isExternal ? "noreferrer" : undefined}
                 className={
                   isActive
                     ? "text-accent-cool underline rounded px-3 py-1 font-semibold transition"
@@ -84,10 +87,13 @@ const Topbar = () => {
             <nav className="flex flex-col gap-4 mt-8">
               {topbarLinks.map((link) => {
                 const isActive = location.pathname === link.href;
+                const isExternal = link.href.startsWith("http");
                 return (
                   <a
                     key={link.name}
                     href={link.href}
+                    target={isExternal ? "_blank" : undefined}
+                    rel={isExternal ? "noreferrer" : undefined}
                     className={
                       isActive
                         ? "text-accent-cool underline rounded px-3 py-2 font-semibold transition bg-black/30"
