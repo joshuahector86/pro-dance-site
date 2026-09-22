@@ -5,26 +5,34 @@ export type WorkEntry = {
   location: string;
   startDate: string;
   category: "company" | "freelance" | "teaching" | "performance" | "media";
-  highlights: string[];
+  highlights?: string[];
   endDate?: string | "Present";
   link?: string;
 };
 
 export const workHistory: WorkEntry[] = [
   {
-    id: "nydp-company",
-    organization: "New York Dance Project",
-    role: "Company Member",
+    id: "peridance-company",
+    organization: "Peridance Contemporary Dance Company",
+    role: "Dancer",
     location: "New York, NY",
-    startDate: "2025",
+    startDate: "2026",
     endDate: "- Present",
     category: "company",
+  },
+  {
+    id: "mwc-company",
+    organization: "Matthew Westerby Company",
+    role: "Dancer",
+    location: "New York, NY",
+    startDate: "Spring 2026",
+    // endDate: "- Present",
+    category: "company",
     highlights: [
-      "Soloist dancer with New York Dance Project.",
-      "Repertoire: works by Roger C. Joffrey, Robert Battle, Davis Robertson and more.",
-      "Debuting new works by Maleek Washing, Clifford Williams, Davis Robertson, and others.",
+      "Dancer with the Matthew Westerby Company Performing original company works.",
     ],
   },
+
   {
     id: "freelance-artist",
     organization: "Freelance Dance Artist",
@@ -60,9 +68,23 @@ export const workHistory: WorkEntry[] = [
     ],
   },
   {
+    id: "nydp-company",
+    organization: "New York Dance Project",
+    role: "Dancer",
+    location: "New York, NY",
+    startDate: "2025",
+    endDate: "- 2026",
+    category: "company",
+    highlights: [
+      "Soloist dancer with New York Dance Project.",
+      "Repertoire: works by Roger C. Joffrey, Robert Battle, Davis Robertson and more.",
+      "Debuting new works by Maleek Washing, Clifford Williams, Davis Robertson, and others.",
+    ],
+  },
+  {
     id: "ailey-whitney-figure-drawing",
     organization: "Alvin Ailey American Dance Theater Extension",
-    role: "Freelance Dance Artist",
+    role: "Dancer / Model",
     location: "New York, NY",
     startDate: "2023",
     endDate: "- 2025",

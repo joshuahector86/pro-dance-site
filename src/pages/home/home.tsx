@@ -45,16 +45,13 @@ const Home = () => {
             <CustomHeading title="Current Work" />
 
             <p className="text-lg md:text-lg max-w-xl">
-              Dimitri is currently involved with New York Dance Project for the
-              2025 - 2026 season, performing as a male soloist and debuting new
-              works by choreographers such as Maleek Washing, Clifford Williams,
-              Davis Robertson, and others. The company’s repertoire also
-              features pieces by Roger Joffrey, Robbert Battle, Gerald Arpino,
-              and more. Alongside his work with NYDP, Dimitri pursues his own
-              choreographic projects and regularly appears as a guest artist
-              with various companies in New York City. Beyond concert dance, he
-              is a world-renowned West Coast Swing professional, traveling
-              internationally to teach, judge, and compete.
+              Dimitri is currently involved with Peridance Contemporary Dance
+              Company for the 2026 - 2027 season. Alongside his work with
+              Peridance, Dimitri pursues his own choreographic projects and
+              regularly appears as a guest artist with various companies in New
+              York City. Beyond concert dance, he is a world-renowned West Coast
+              Swing professional, traveling internationally to teach, judge, and
+              compete.
             </p>
           </div>
           <div className="order-first md:order-last">
@@ -67,10 +64,7 @@ const Home = () => {
         </div>
 
         <div className="flex gap-4 items-center">
-          <LinkButton
-            href="https://www.youtube.com/@dimitrihector256"
-            target="_blank"
-          >
+          <LinkButton href="https://www.youtube.com/@dimkandel" target="_blank">
             Youtube
           </LinkButton>
 

@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import {
   About,
-  Archive,
+  // Archive,
   Contact,
   Home,
   PageNotFound,
@@ -15,7 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/work-history" element={<WorkHistory />} />
-        <Route path="/archive" element={<Archive />} />
+        {/* <Route path="/archive" element={<Archive />} /> */}
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
