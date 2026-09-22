@@ -8,5 +8,5 @@ export const topbarLinks = [
 
 export const socialLinks = [
   { name: "Instagram", href: "https://www.instagram.com/dimkandel/" },
-  { name: "Youtube", href: "https://www.youtube.com/@dimitrihector256" },
+  { name: "Youtube", href: "https://www.youtube.com/@dimkandel" },
 ];

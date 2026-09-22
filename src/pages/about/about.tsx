@@ -30,8 +30,8 @@ const About = () => {
         ))}
 
         <div className="flex gap-4 justify-center">
-          <LinkButton href="/archive">To the Archive!</LinkButton>
-          <LinkButton href="/work-history">To Work History!</LinkButton>
+          {/* <LinkButton href="/archive">To the Archive!</LinkButton> */}
+          <LinkButton href="/work-history">Work History!</LinkButton>
         </div>
       </article>
     </Page>

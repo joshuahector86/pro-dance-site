@@ -64,10 +64,7 @@ const Home = () => {
         </div>
 
         <div className="flex gap-4 items-center">
-          <LinkButton
-            href="https://www.youtube.com/@dimitrihector256"
-            target="_blank"
-          >
+          <LinkButton href="https://www.youtube.com/@dimkandel" target="_blank">
             Youtube
           </LinkButton>
 
