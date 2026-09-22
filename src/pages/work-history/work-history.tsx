@@ -21,7 +21,7 @@ const WorkHistory = () => {
               {entry.startDate} {entry.endDate}
             </p>
             <ul className="list-disc list-inside mt-2">
-              {entry.highlights.map((highlight, index) => (
+              {entry.highlights?.map((highlight, index) => (
                 <li key={index}>{highlight}</li>
               ))}
             </ul>
